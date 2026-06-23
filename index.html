@@ -12,6 +12,16 @@
 <body>
   <div id="game-container">
     <canvas id="game-canvas"></canvas>
+    <aside id="scorebug" aria-live="polite">
+      <div class="scorebug-header">
+        <span class="scorebug-title">WC 2026</span>
+        <span class="scorebug-badge">LIVE</span>
+      </div>
+      <div id="scorebug-body" class="scorebug-body">
+        <p class="scorebug-empty">Loading scores…</p>
+      </div>
+      <p id="scorebug-updated" class="scorebug-updated"></p>
+    </aside>
     <div id="overlay">
       <h1>Flappy Atachian</h1>
       <p id="subtitle">Navigate the courtyard arches</p>
@@ -20,6 +30,8 @@
       <button id="start-btn" type="button">Start Game</button>
     </div>
   </div>
+  <script src="config.js" onerror="window.SCOREBUG_CONFIG={}"></script>
+  <script src="scorebug.js"></script>
   <script src="game.js"></script>
 </body>
 </html>
